@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+  web1:
+    image: nginx
+    container_name: w1
+    restart: always
+    ports:
+      - 9001:80
+  web2:
+    image: nginx
+    container_name: w2
+    ports:
+      - 9002:80
+networks:
+  default:
+    external: true
+    name: temp    
